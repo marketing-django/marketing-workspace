@@ -1,4 +1,4 @@
-# Django marketing workspace
+# [Django marketing workspace](https://marketing-django.github.io/marketing-workspace/)
 
 A shared workspace to support our work on a new marketing strategy for Django and follow-on marketing activities.
 
