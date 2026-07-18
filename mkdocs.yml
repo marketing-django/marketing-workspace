@@ -1,0 +1,53 @@
+site_name: Django marketing workspace
+repo_url: https://github.com/marketing-django/marketing-workspace
+site_url: https://marketing-django.github.io/marketing-workspace/
+docs_dir: docs
+edit_uri: edit/main/docs
+
+site_description: A shared workspace to support our work on a new marketing strategy for Django and follow-on marketing activities.
+repo_name: marketing-workspace
+dev_addr: localhost:8001
+theme:
+  name: material
+  font: false
+  logo: theme/favicon.png
+  favicon: theme/favicon.png
+  palette:
+    scheme: default
+    primary: white
+  features:
+    - content.code.copy
+  custom_dir: docs/theme
+markdown_extensions:
+  - admonition
+  - sane_lists
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+plugins:
+  - search
+  - llmstxt:
+      full_output: llms-full.txt
+      # Only add docs pages that are relevant to users of the project.
+      sections:
+        Knowledge base:
+          - knowledge-base/index.md
+        Website redesign:
+          - website-redesign/index.md
+        Marketing strategy:
+          - marketing-strategy/index.md
+nav:
+  - Home: index.md
+  - Knowledge base: knowledge-base/index.md
+  - Website redesign: website-redesign/index.md
+  - Marketing strategy: marketing-strategy/index.md
