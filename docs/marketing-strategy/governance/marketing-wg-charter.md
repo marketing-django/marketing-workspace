@@ -1,6 +1,7 @@
 ---
 source: https://github.com/django/dsf-working-groups/pull/60
 last_updated: 2026-07-18
+status: proposal
 ---
 
 # Marketing Working Group
