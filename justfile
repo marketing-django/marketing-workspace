@@ -24,6 +24,10 @@ format *paths=".":
     uv run ruff format {{ paths }}
     npm run format -- {{ paths }}
 
+# Check links in all Markdown files (requires lychee).
+check-links:
+    lychee --no-progress --hidden .
+
 # Build the documentation.
 build-docs:
     NO_MKDOCS_2_WARNING=1 uv run mkdocs build --strict
