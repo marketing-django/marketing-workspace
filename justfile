@@ -15,7 +15,7 @@ init:
 lint:
     uv run ruff check
     uv run ruff format --check
-    uv run mypy *.py
+    if git ls-files '*.py' | grep -q .; then uv run mypy .; fi
     uv run ty check
 
 # Format project files.
