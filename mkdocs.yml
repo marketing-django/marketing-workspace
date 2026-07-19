@@ -17,9 +17,29 @@ theme:
     primary: white
   features:
     - content.code.copy
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - content.tooltips
+    - search.highlight
+    - search.suggest
+    - search.share
   custom_dir: docs/theme
 markdown_extensions:
+  - abbr
   - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
   - sane_lists
   - toc:
       permalink: true
@@ -30,24 +50,75 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.magiclink
+  # Appends docs/contributing/abbreviations.md to every page.
+  - pymdownx.snippets:
+      base_path: docs
+      auto_append:
+        - contributing/abbreviations.md
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
 plugins:
   - search
+  - git-revision-date-localized:
+      type: date
+      # Use the build date for files not yet committed, so `--strict` builds pass.
+      fallback_to_build_date: true
   - llmstxt:
       full_output: llms-full.txt
-      # Only add docs pages that are relevant to users of the project.
+      # Keep in sync with nav.
       sections:
+        Home:
+          - index.md
+        Contributing:
+          - contributing/*.md
         Knowledge base:
-          - knowledge-base/index.md
-        Website redesign:
-          - website-redesign/index.md
+          - knowledge-base/*.md
         Marketing strategy:
-          - marketing-strategy/index.md
+          - marketing-strategy/*.md
+        Website redesign:
+          - website-redesign/*.md
+# Treat structural mistakes as warnings, so `--strict` builds fail on them.
+validation:
+  nav:
+    # Every docs page must be in nav, or marked with `not_in_nav` front matter.
+    omitted_files: warn
+    absolute_links: warn
+  links:
+    absolute_links: warn
+    unrecognized_links: warn
+    anchors: warn
 nav:
   - Home: index.md
-  - Knowledge base: knowledge-base/index.md
-  - Website redesign: website-redesign/index.md
-  - Marketing strategy: marketing-strategy/index.md
+  - Contributing:
+      - contributing/README.md
+      - Documentation style guide: contributing/style-guide.md
+      - Quality assurance: contributing/quality-assurance.md
+      - Project architecture: contributing/architecture.md
+      - Abbreviations: contributing/abbreviations.md
+  - Knowledge base:
+      - knowledge-base/README.md
+      - Teams: knowledge-base/organisation/teams.md
+  - Marketing strategy:
+      - marketing-strategy/README.md
+      - Draft:
+          - marketing-strategy/draft/README.md
+          - SWOT analysis: marketing-strategy/draft/swot.md
+      - Competitors analysis:
+          - marketing-strategy/competitors-analysis/README.md
+          - Django self-audit: marketing-strategy/competitors-analysis/django-self-audit.md
+          - FastAPI: marketing-strategy/competitors-analysis/fastapi.md
+          - Next.js: marketing-strategy/competitors-analysis/next-js.md
+          - Next.js full draft: marketing-strategy/competitors-analysis/next-js-full.md
+          - Ruby on Rails: marketing-strategy/competitors-analysis/ruby-on-rails.md
+          - Source map template: marketing-strategy/competitors-analysis/template-competitor-source-map.md
+          - Analysis template: marketing-strategy/competitors-analysis/template-competitor-analysis.md
+      - Governance:
+          - Marketing WG charter: marketing-strategy/governance/marketing-wg-charter.md
+      - Research:
+          - Formats: marketing-strategy/research/formats.md
+      - Resources: marketing-strategy/resources/README.md
+  - Website redesign:
+      - website-redesign/README.md
+      - Redesign announcement: website-redesign/redesign-announcement.md
