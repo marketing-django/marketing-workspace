@@ -4,7 +4,7 @@
 
 ## Project structure & module organization
 
-Contributor and user docs are in `docs/`.
+Contributor and user docs are in `docs/`. Make sure `mkdocs.yml` (`nav` and `llmstxt` sections) reference relevant files.
 
 ## Development commands
 
@@ -39,4 +39,5 @@ See [docs/CONTRIBUTING.md#pull-request-workflow](docs/CONTRIBUTING.md#pull-reque
 - Be concise and to the point. Explain rationales that aren't obvious.
 - No Title Case usage ever. Always use Sentence case.
 - Recent commit messages use short, capitalized, imperative summaries (e.g., "Enforce additional mypy check").
+- When the agent commits directly, use `Assisted-by` in a `--trailer`. Example: `git commit -s -m "Add support for X" --trailer "Assisted-by: <agent-name>/<model-id>"`
 - PRs should include a clear description, relevant test evidence (command + result), links to any related issues.

@@ -57,6 +57,16 @@ For prose style, tone, terminology, headings, and linking conventions, follow th
 - Follow the [documentation style guide](contributing/style-guide.md) for tone, terminology, headings, and linking conventions.
 - Run `just format` before committing so prettier formats Markdown files consistently.
 
+### MkDocs configuration
+
+The documentation site is built with [MkDocs](https://www.mkdocs.org/) from the Markdown files in `docs/`, configured in `mkdocs.yml`. When you add, rename, or move pages, keep the configuration in sync with the file structure:
+
+- **Landing pages**: each section folder uses a `README.md` as its landing page, so it also renders when browsing the folder on GitHub.
+- **Navigation**: the `nav` key should list all pages of the site.
+- **llms.txt**: the `llmstxt` plugin's `sections` key lists the pages included in the generated `llms-full.txt`. Add new section landing pages there as well.
+
+Pages that aren't listed in `nav` are still built and reachable via links; MkDocs logs them as an informational message, which is expected. Run `just build-docs` to check your changes – it builds with `--strict`, so warnings such as missing nav entries or unresolved links fail the build.
+
 ## Pull request workflow
 
 1. Create a branch from `main` with a descriptive name.

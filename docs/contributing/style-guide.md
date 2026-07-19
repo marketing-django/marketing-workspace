@@ -73,7 +73,7 @@ Keep callouts to one or two sentences. Use them when the information directly af
 ## Links
 
 - Use **inline links** in prose. Prefer `[link text](url)` over bare URLs.
-- Link to internal documentation with **relative paths**: `[contribution guidelines](CONTRIBUTING.md)`, `[marketing strategy index](../marketing-strategy/index.md)`.
+- Link to internal documentation with **relative paths**: `[contribution guidelines](CONTRIBUTING.md)`, `[marketing strategy index](../marketing-strategy/README.md)`.
 - On first or prominent mention of a key concept, team, or external resource, link to its canonical source. Repeat links only when the repetition genuinely helps scanning in a longer section.
 - External links should point to **official, stable resources**: the Django project's website, the DSF working groups repository, the Django Forum, official tool documentation. Avoid linking to transient content (forum threads, personal gists) unless there is no canonical alternative.
 - Link text should be descriptive. Avoid "click here" or "this link". Prefer the title of the target page.
