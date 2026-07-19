@@ -37,7 +37,7 @@ Every page follows a predictable shape:
 
 - Code blocks use fenced syntax (` ``` `) with a language identifier: `sh`, `bash`, `txt`, `markdown`.
 - Examples should be self-contained where possible: a reader should be able to copy, paste, and run them.
-- Inline comments inside code blocks are acceptable when they clarify non-obvious lines, but keep them short. Match the comment style used in the surrounding codebase (see [Contribution Guidelines](../CONTRIBUTING.md)).
+- Inline comments inside code blocks are acceptable when they clarify non-obvious lines, but keep them short. Match the comment style used in the surrounding codebase (see [contribution guidelines](README.md)).
 - Prefer showing the happy path first. Document edge cases, fallbacks, and advanced configuration in a separate sub-section or callout.
 
 ### Tables
@@ -70,14 +70,49 @@ We use Markdown blockquotes for short, scoped callouts:
 
 Keep callouts to one or two sentences. Use them when the information directly affects how the reader proceeds, not as a general aside.
 
+On occasion, we can also use MkDocs admonition syntax (`!!! note`) for callouts that really do need to stand out.
+
 ## Links
 
 - Use **inline links** in prose. Prefer `[link text](url)` over bare URLs.
-- Link to internal documentation with **relative paths**: `[contribution guidelines](CONTRIBUTING.md)`, `[marketing strategy index](../marketing-strategy/README.md)`.
+- Link to internal documentation with **relative paths** to the target file: `[contribution guidelines](README.md)`, `[marketing strategy index](../marketing-strategy/README.md)`. Always include the `.md` file in the path – links to folders work on GitHub but are left broken on the built site.
+- To link to a section of a page, append its anchor: the heading text lowercased, spaces replaced with hyphens, punctuation removed. For example, `[Links](#links)` for this section. Broken anchors fail the build, so `just build-docs` catches mistakes.
+- For GitHub issues and pull requests, use the shorthand from the `magiclink` extension: `django/djangoproject.com#2287` renders as a linked reference.
 - On first or prominent mention of a key concept, team, or external resource, link to its canonical source. Repeat links only when the repetition genuinely helps scanning in a longer section.
 - External links should point to **official, stable resources**: the Django project's website, the DSF working groups repository, the Django Forum, official tool documentation. Avoid linking to transient content (forum threads, personal gists) unless there is no canonical alternative.
 - Link text should be descriptive. Avoid "click here" or "this link". Prefer the title of the target page.
 - Do not add links inside headings. They are harder to identify for screen reader users and break heading navigation.
+
+Run `just check-links` before committing to verify internal and external links across all Markdown files, including files MkDocs doesn't check (the README, AGENTS.md, agent skills).
+
+### Frequently linked resources
+
+Use these canonical URLs for resources we link often, so links stay consistent and are cheap to update:
+
+| Resource                      | URL                                                     |
+| :---------------------------- | :------------------------------------------------------ |
+| Django project website        | https://www.djangoproject.com/                          |
+| Website redesign issue        | https://github.com/django/djangoproject.com/issues/2287 |
+| DSF working groups repository | https://github.com/django/dsf-working-groups            |
+| Django Forum                  | https://forum.djangoproject.com/                        |
+| Django documentation          | https://docs.djangoproject.com/                         |
+
+### Front matter for mirrored content
+
+Pages that mirror an external document (a charter, a blog post, a policy) record their provenance in YAML front matter at the top of the file:
+
+```yaml
+---
+source: https://github.com/django/dsf-working-groups/pull/60
+last_updated: 2026-07-18
+---
+```
+
+- `source` – canonical URL of the original document.
+- `last_updated` – date the mirrored content was last checked against the source (`YYYY-MM-DD`).
+- `status` – optional workflow state, for example `proposal`.
+
+Mirrored content keeps its original spelling and formatting; the front matter records why.
 
 ## Headings and titles
 
@@ -99,7 +134,7 @@ Exceptions:
 
 - **Proper nouns and product names** keep their own spelling regardless of locale.
 - When a prose sentence refers to a specific code symbol, use the symbol's exact spelling.
-- Content imported from external sources (for example, a charter from the `django/dsf-working-groups` repository) keeps its original spelling. Record this with `source:` and `last_updated:` front matter rather than rewriting the source.
+- Content imported from external sources (for example, a charter from the `django/dsf-working-groups` repository) keeps its original spelling. Record this with `source:` and `last_updated:` [front matter](#front-matter-for-mirrored-content) rather than rewriting the source.
 
 ### Capitalization
 
@@ -157,6 +192,6 @@ Exceptions:
 We document limitations and open questions directly in the relevant page, not hidden in a separate caveats section.
 
 - State limitations as facts, not apologies: "There is no workaround if a working group decision is still pending – the page stays in draft until then."
-- Call out **draft** or **work in progress** status at the top of the page with a blockquote, so readers see the status before investing in the content. Add `source:` and `last_updated:` front matter when the page mirrors an external document.
+- Call out **draft** or **work in progress** status at the top of the page with an admonition, so readers see the status before investing in the content. Add [front matter](#front-matter-for-mirrored-content) when the page mirrors an external document.
 - When a process differs between working groups or channels, say so explicitly: "Website content reviews are handled by the website WG, while marketing campaign content is reviewed by the marketing WG."
-- Governance-relevant information lives alongside the relevant page and is cross-linked from [CONTRIBUTING.md](../CONTRIBUTING.md) where it affects how contributors collaborate.
+- Governance-relevant information lives alongside the relevant page and is cross-linked from the [contribution guidelines](README.md) where it affects how contributors collaborate.
