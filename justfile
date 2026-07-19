@@ -3,31 +3,31 @@
 
 # List all the justfile recipes.
 help:
-  just --list --list-prefix 'just '
+    just --list --list-prefix 'just '
 
 # Install dependencies and initialize for development.
 init:
-  uv venv
-  uv sync --dev
-  prek
+    uv venv
+    uv sync --dev
+    prek
 
 # Lint the project.
 lint:
-  uv run ruff check
-  uv run ruff format --check
-  uv run mypy *.py
-  uv run ty check
+    uv run ruff check
+    uv run ruff format --check
+    uv run mypy *.py
+    uv run ty check
 
 # Format project files.
 format *paths=".":
-  uv run ruff check --fix {{paths}}
-  uv run ruff format {{paths}}
-  npm run format -- {{paths}}
+    uv run ruff check --fix {{ paths }}
+    uv run ruff format {{ paths }}
+    npm run format -- {{ paths }}
 
 # Build the documentation.
 build-docs:
-  NO_MKDOCS_2_WARNING=1 uv run mkdocs build --strict
+    NO_MKDOCS_2_WARNING=1 uv run mkdocs build --strict
 
 # Build the documentation and serve it locally.
 docs:
-  NO_MKDOCS_2_WARNING=1 uv run mkdocs serve --strict
+    NO_MKDOCS_2_WARNING=1 uv run mkdocs serve --strict
