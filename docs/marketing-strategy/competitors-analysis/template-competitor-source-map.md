@@ -1,5 +1,9 @@
 # Template: competitor source map
 
+> **Output style.** Fill every field with **one short sentence or a compact table cell** — not multi-paragraph prose. Every non-trivial claim (a tagline, a number, a release version, an audience) carries an inline source link `[claim](url)` to the primary, authoritative URL. Quote taglines verbatim and link them to the page they came from. If you cannot confirm a figure, mark it `_unconfirmed_` or `_directional_` rather than guessing.
+>
+> This template is filled **twice**: the long-form full draft at `<competitor-slug>-full.md` (each cell may run longer, with full quotes and reasoning) and the compact curated file at `<competitor-slug>.md` (each cell is at most a few lines, same URLs, no prose padding). The two versions share source URLs; the curated file is what reviewers read.
+
 ### Competitor source map
 
 #### 1\. Website(s) & Flagship Properties

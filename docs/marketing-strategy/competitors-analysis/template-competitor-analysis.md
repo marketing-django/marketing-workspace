@@ -1,5 +1,9 @@
 # Template: competitor analysis
 
+> **Output style.** Fill each field with **one short paragraph or a compact bulleted list** — not multi-paragraph essays. Every non-trivial claim carries an inline source link `[claim](url)` to a primary, authoritative URL. Quote taglines, positioning sentences, and headline framings verbatim and link the quote to the page it appears on. Adoption numbers, funding amounts, team sizes, and follower counts require a link and a date of review; mark anything you cannot authoritatively confirm as `_unconfirmed_` or `_directional_` rather than guessing.
+>
+> This template is filled **twice**: the long-form full draft at `<competitor-slug>-full.md` (each field may run to multiple paragraphs, with full quotes and reasoning) and the compact curated file at `<competitor-slug>.md` (each field is one paragraph or a list, same inline source links, no prose padding). The two versions share source URLs; the curated file is what reviewers and downstream strategy work read. A field that runs to three paragraphs in the curated file is a drafting failure — push the prose into the full draft and distil to a clause with a link.
+
 ## Overview
 
 ### Category
