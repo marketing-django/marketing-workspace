@@ -15,6 +15,15 @@ A skill made the shortlist when it:
 
 Where two skills cover the same format, we picked the one with stricter evidence rules, then the more permissive license.
 
+## Where the skills are
+
+All 18 are copied into `.agents/skills/`, next to our own competitors analysis skill, so agents working in this workspace can use them directly. Each copy:
+
+- Is unchanged from upstream apart from its front matter, which now records `license` and, under `metadata`, the `source` repository, path, and commit. `swot-analysis` also has its links to sibling skills rewritten to point upstream.
+- Carries the upstream `LICENSE` file in its folder.
+- Leaves out upstream test files (`evals/`).
+- Is skipped by our formatter, so it stays comparable with upstream.
+
 ## Adaptations every skill needs
 
 All of these skills assume a company selling a product. Before using any of them for Django, give the agent this translation, ideally once in a shared context document:
@@ -54,7 +63,7 @@ Our own [competitors analysis skill](../marketing-strategy/competitors-analysis/
 
 - **[`swot-analysis`](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/swot-analysis)** (`deanpeters/Product-Manager-Skills`, CC BY-NC-SA 4.0) – every entry needs a source and a Fact / Inference label, each quadrant is capped at five ranked entries, and the output ends with strength–opportunity and weakness–threat "crossings". It also catches the most common SWOT mistake: listing something we would have to do as an "opportunity". It works on a competitor as well as on ourselves.
 
-> The license allows us to use this skill but not to copy or adapt it into this MIT-licensed workspace. If that is a problem, the SWOT step inside [`competitive-intelligence`](https://github.com/realjaymes/marketingagentskills/tree/main/skills/competitive-intelligence) (`realjaymes/marketingagentskills`, MIT) is the best permissive fallback: shorter, but it also requires every SWOT line to lead to a concrete use.
+> Our copy of this skill stays under CC BY-NC-SA 4.0, unlike the rest of this MIT-licensed workspace: non-commercial use only, and any adaptation keeps the same license. It also leans on two upstream "protocol" skills we have not copied. If either is a problem, the SWOT step inside [`competitive-intelligence`](https://github.com/realjaymes/marketingagentskills/tree/main/skills/competitive-intelligence) (`realjaymes/marketingagentskills`, MIT) is the best permissive fallback: shorter, but it also requires every SWOT line to lead to a concrete use.
 
 ## Positioning and messaging
 

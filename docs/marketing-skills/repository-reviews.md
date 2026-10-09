@@ -120,7 +120,7 @@ Found through GitHub search, skill directories, and "awesome" lists. For these w
 
 - **Product marketing (8).** `swot-analysis` is the best SWOT skill we reviewed: every entry needs a source and a Fact / Inference label, quadrants are capped at five ranked entries, and it ends with strength–opportunity and weakness–threat "crossings" so the SWOT leads somewhere. Also `jobs-to-be-done`, `positioning-workshop` (Geoffrey Moore format), a chain of competitive research skills, and three stakeholder mapping skills. No vision or OKR skill.
 - **Non-profit (3), community (2).** Stakeholder mapping transfers to the Foundation pillar. Nothing else.
-- **Volunteer-driven (4).** Licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/): non-commercial use only, and adaptations must carry the same license. Using the skills as they are is fine for us. Copying or adapting them into this MIT-licensed workspace is not. Skills depend on shared "protocol" skills, so they work best installed as a set.
+- **Volunteer-driven (4).** Licensed [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/): non-commercial use only, and adaptations must carry the same license. Using the skills as they are is fine for us. Anything we copy or adapt keeps that license, so it can't be folded into this workspace's MIT-licensed content. Skills depend on shared "protocol" skills, so they work best installed as a set.
 - **Build quality (7).** No evals, but scripts validate metadata and trigger phrases. Deliberately portable: avoids Claude-only syntax and documents Codex and ChatGPT installs. Six contributors, last commit 2026-09-01.
 
 ### wondelai/skills

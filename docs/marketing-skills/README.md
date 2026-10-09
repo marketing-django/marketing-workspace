@@ -10,7 +10,7 @@ A review of publicly available agent skills for marketing, to find the ones wort
 - **Product strategy is well covered.** We found a strong skill for every format in our [strategy draft](../marketing-strategy/draft/README.md) except a vision statement, where the only option is thin.
 - **The five repositories we started with miss our gaps.** None has a usable SWOT, vision, or OKR skill, and none addresses non-profits. Searching further turned up eight more repositories, three of which now rank in our top five.
 - **Few skills are tested.** Five repositories ship evals, and only one publishes results. "Has evals" here means test cases exist, not that the skill is proven to work.
-- **Licensing is mostly simple.** Twelve repositories are MIT or Apache 2.0. One of the best (`deanpeters/Product-Manager-Skills`) is non-commercial and share-alike: fine to use, not to copy into this workspace.
+- **Licensing is mostly simple.** Twelve repositories are MIT or Apache 2.0. One of the best (`deanpeters/Product-Manager-Skills`) is non-commercial and share-alike: fine to use, but anything we copy or adapt from it keeps that license.
 
 ## Recommended skills
 
@@ -72,8 +72,8 @@ How to read this:
 
 1. **Try the top three skills on real material** – for example `swot-analysis` on the existing [Django self-audit](../marketing-strategy/competitors-analysis/django-self-audit.md) – and judge the output before adopting anything.
 2. **Write a Django context document first.** Most skills read a shared product context file before doing anything. Ours should replace buyers, pricing, and revenue with adopters, sponsors, and contributors, so that every skill inherits the right framing.
-3. **Adapt rather than install wholesale.** Our own [competitors analysis skill](../marketing-strategy/competitors-analysis/README.md) is already more specific and stricter on sourcing than any public equivalent. The same approach – a short Django-specific skill that borrows the method – will serve us better than 50 generic ones.
-4. **Decide how to handle the non-commercial license** before relying on `deanpeters/Product-Manager-Skills`. A permissive fallback exists for SWOT, noted in [recommended skills](recommended-skills.md).
+3. **Adapt the copies we now have.** The 18 shortlisted skills are in `.agents/skills/`, as published upstream. Our own [competitors analysis skill](../marketing-strategy/competitors-analysis/README.md) is already more specific and stricter on sourcing than any public equivalent. The same approach – trimming each copy to a short Django-specific skill that keeps the method – will serve us better than generic ones.
+4. **Decide whether to keep the non-commercial skill.** `swot-analysis` is in `.agents/skills/` under its own CC BY-NC-SA 4.0 license, not this workspace's MIT license. A permissive fallback exists, noted in [recommended skills](recommended-skills.md).
 
 ## In this section
 

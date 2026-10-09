@@ -117,7 +117,7 @@ Portable: plugins for Claude Code, Codex, Cursor, and Gemini. MIT license.
 
 ## deanpeters/Product-Manager-Skills
 
-Portable by design (Claude, Codex, and ChatGPT installs). CC BY-NC-SA 4.0: usable, but not to be copied or adapted into this workspace.
+Portable by design (Claude, Codex, and ChatGPT installs). CC BY-NC-SA 4.0: usable, but copies and adaptations keep that license.
 
 | Skill                           | Verdict     | Useful to agents | Evals | Notes                                                                               |
 | :------------------------------ | :---------- | :--------------- | :---- | :---------------------------------------------------------------------------------- |

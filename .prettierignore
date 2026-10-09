@@ -1,0 +1,3 @@
+# Third-party skills, kept as published upstream. See `metadata.source` in each SKILL.md.
+.agents/skills/*
+!.agents/skills/competitors-analysis

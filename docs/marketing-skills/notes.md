@@ -58,8 +58,8 @@ These are candidates for skills we write ourselves.
 
 ## Open questions
 
-- Do we want skills in this repository at all (under `.agents/skills/`, next to the competitors analysis skill), or just a list of ones to install individually?
-- Is non-commercial, share-alike licensing acceptable for skills we only use and don't redistribute? This decides whether `deanpeters/Product-Manager-Skills` stays on the shortlist.
+- Is a non-commercial, share-alike skill acceptable in this repository? `swot-analysis` is copied under its own license; this decides whether it stays.
+- How do we keep the copies in `.agents/skills/` current? Each records the upstream commit it came from, but nothing checks for updates.
 - Who reviews agent output produced with these skills before it reaches the strategy draft?
 - Should the Django context document live in the [knowledge base](../knowledge-base/README.md), so that it serves people as well as agents?
 
