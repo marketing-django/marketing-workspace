@@ -9,4 +9,6 @@ We organize information across four layers:
 1. [Contributing](contributing/README.md): guidance on how to work within this workspace. Read this first, for all types of tasks.
 2. [Knowledge base](knowledge-base/README.md): general-purpose information about Django, relevant for a wide range of projects.
 3. [Marketing strategy](marketing-strategy/README.md): information and working documents related to marketing specifically, across a wide range of projects.
-4. Projects, like [Website redesign](website-redesign/README.md): information about the website redesign project specifically.
+4. Projects: information about a specific project.
+   - [Website redesign](website-redesign/README.md): the djangoproject.com redesign.
+   - [Marketing skills](marketing-skills/README.md): a review of public agent skills we could reuse for marketing work.

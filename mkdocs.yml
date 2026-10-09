@@ -79,6 +79,8 @@ plugins:
           - marketing-strategy/*.md
         Website redesign:
           - website-redesign/*.md
+        Marketing skills:
+          - marketing-skills/*.md
 # Treat structural mistakes as warnings, so `--strict` builds fail on them.
 validation:
   nav:
@@ -122,3 +124,9 @@ nav:
   - Website redesign:
       - website-redesign/README.md
       - Redesign announcement: website-redesign/redesign-announcement.md
+  - Marketing skills:
+      - marketing-skills/README.md
+      - Recommended skills: marketing-skills/recommended-skills.md
+      - Repository reviews: marketing-skills/repository-reviews.md
+      - Skill reviews: marketing-skills/skill-reviews.md
+      - Working notes: marketing-skills/notes.md
